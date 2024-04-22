@@ -1,0 +1,39 @@
+{
+    "PolicyName": "root",
+    "PolicyDocument": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "IamListAccess",
+                "Effect": "Allow",
+                "Action": [
+                    "iam:ListRoles",
+                    "iam:ListUsers"
+                ]
+
+            },
+            {
+                "Sid": "IamReadAccess",
+                "Effect": "Allow",
+                "Action": [
+                    "iam:GetRole",
+                    "iam:GetUser"
+                ]
+
+            },
+            {
+                "Sid": "IamWriteAccess",
+                "Effect": "Allow",
+                "Action": [
+                    "iam:CreateRole",
+                    "iam:DeleteRole",
+                    "iam:UpdateRole",
+                    "iam:CreateUser",
+                    "iam:DeleteUser",
+                    "iam:UpdateUser"
+                ],
+                "Resource": "*"
+            }
+        ]
+    }
+}
