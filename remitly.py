@@ -1,7 +1,6 @@
 import json
 import unittest
 import os
-import json
 
 def verify_json(file_path):
     if not os.path.exists(file_path):
